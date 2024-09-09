@@ -21,6 +21,8 @@ const landingRoute = require("./routes/landingRoute")
 const managerRoutes = require("./routes/managerRoutes")
 const salesagentRoute = require("./routes/salesagentRoute")
 const ownerRoutes = require("./routes/ownerRoutes")
+const creditsalesRoute = require("./routes/creditsalesRoute")
+const stockRoute = require("./routes/stockRoute")
 
 //Instatiations
 const app = express();
@@ -74,10 +76,12 @@ passport.deserializeUser(Signup.deserializeUser());
 //use routes/use imported routes
 app.use("/", signupRoutes);
 app.use("/", loginRoutes);
-app.use("/",landingRoute);
-app.use("/",managerRoutes);
-app.use("/",salesagentRoute);
-app.use("/",ownerRoutes);
+app.use("/", landingRoute);
+app.use("/", managerRoutes);
+app.use("/", salesagentRoute);
+app.use("/", ownerRoutes);
+app.use("/", creditsalesRoute);
+app.use("/", stockRoute);
 
 
 //error message
