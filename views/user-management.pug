@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    title Users Page
+    Link(rel="stylesheet" href="/css/all-users.css")
+
+    h1 All Users List
+    table
+      thead
+        tr
+          th  Name
+
+          th Action
+      tbody
+        if signins.length 
+        each signin in signins
+          tr
+            td #{signin.username}
+           
+        
+             
+            td 
+              form(method ="post" action = '/deleteUser') 
+                input(type="hidden", placeholder="", name="id", value=signin._id)
+                button#delete_button(type='submit') Delete 
+        else 
+          p no users signed up yet
+

@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales Agent Dashboard
+    link(rel='stylesheet' href='/css/sse.css')
+.dashboard
+  h1 SalesAgent Dashboard
+  form#salesForm
+    label(for='produceName') Produce Name:
+    input#produceName(type='text' name='produceName' required='')
+    label(for='tonnage') Tonnage (in kgs):
+    input#tonnage(type='number' name='tonnage' required='')
+    label(for='amountPaid') Amount Paid (in Ugx):
+    input#amountPaid(type='text' name='amountPaid' minlength='5' required='')
+    label(for='buyerName') Buyer&apos;s Name:
+    input#buyerName(type='text' name='buyerName' minlength='2' required='')
+    label(for='salesAgentName') Sales Agent&rsquo;s Name:
+    input#salesAgentName(type='text' name='salesAgentName' minlength='2' required='')
+    label(for='saleDate') Date:
+    input#saleDate(type='date' name='saleDate' required='')
+    label(for='saleTime') Time:
+    input#saleTime(type='time' name='saleTime' required='')
+    button(type='submit') Submit
+  #result
+script(src='salesagentdashboard.js')

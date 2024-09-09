@@ -1,0 +1,28 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Procurement Form
+   link(rel='stylesheet' href='/css/spe.css')
+.form-container
+  form
+    h2 Procurement Form
+    label(for='produceName') Produce Name:
+    input#produceName(type='text' name='produceName' required='')
+    label(for='produceType') Produce Type:
+    input#produceType(type='text' name='produceType' required='')
+    label(for='procurementDate') Date:
+    input#procurementDate(type='date' name='procurementDate' required='')
+    label(for='procurementTime') Time:
+    input#procurementTime(type='time' name='procurementTime' required='')
+    label(for='tonnage') Tonnage (in kgs):
+    input#tonnage(type='number' name='tonnage' required='')
+    label(for='cost') Cost (in Ugx):
+    input#cost(type='number' name='cost' required='')
+    label(for='dealerName') Dealer Name:
+    input#dealerName(type='text' name='dealerName' required='')
+    label(for='branchName') Branch Name:
+    input#branchName(type='text' name='branchName' required='')
+    label(for='contactInfo') Contact Information:
+    input#contactInfo(type='tel' name='contactInfo' required='')
+    button(type='submit') Submit

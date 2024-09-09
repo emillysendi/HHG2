@@ -1,0 +1,72 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sign Up
+  style.
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #718ac0;
+    }
+    .signup-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    }
+    .signup-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    .signup-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    }
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+    .signup-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2844a7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+    .signup-container input[type="submit"]:hover {
+    background-color: #216288;
+    }
+.signup-container
+  h2 Create an Account
+  form(action='/signup' method='post')
+    label(for='username') Username
+    input#username(type='text' name='username')
+    label(for='email') Email
+    input#email(type='email' name='email')
+    select#role(name='role')  
+      option(selected='') Select Role
+      option(value='owner') Owner
+      option(value='salesagent') Salesagent 
+      option(value='manager') Manager  
+    label(for='password') Password
+    input#password(type='password' name='password')
+    label(for='confirm_password') Confirm Password
+    input#confirm_password(type='password' name='confirm_password')
+    input(type='submit' value='Sign Up')
