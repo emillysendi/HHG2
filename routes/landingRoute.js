@@ -9,3 +9,6 @@ router.get("/landing", (req, res) => {
   
   
   module.exports = router;
+
+  const express = require('express');
+const app = express();
